@@ -7,12 +7,18 @@ const init = () => {
     btn.textContent = "Stwórz listę";
     const ul = document.createElement("ul");
     document.body.appendChild(ul);
-    btn.addEventListener("click", createLiElement)
-
+    btn.addEventListener("click", createLiElement);
 }
 
 const createLiElement = () => {
 
+    for (let i = 0; i < 10; i++) {
+        const li = document.createElement("li");
+        li.textContent = `Element nr ${orderElement++}`;
+        document.querySelector("ul").appendChild(li).style.fontSize = `${size++}px`;
+    }
+
 }
+
 
 init()
